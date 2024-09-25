@@ -55,4 +55,4 @@ console.log(isNaN("3" * 5)) //false
 
 // ! Ejercicio 9
 let numero = prompt("Escribe un numero")
-console.log(`El número tiene ${numero.length} dígitos`)
+document.write(`<div style='color: blue;'><i>El número tiene ${numero.length} dígitos</i></div>`)
