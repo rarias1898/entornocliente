@@ -87,7 +87,6 @@
 //   }
 // }
 
-
 // ! Ejercicio 8
 // let num = prompt("Intruduce un numero")
 
@@ -98,18 +97,85 @@
 // }
 
 // ! Ejercicio 9
-let num = Number(prompt("Introduce un numero"))
+// let num = Number(prompt("Introduce un número entero positivo"))
 
-do {
-    num = Number(prompt("Introduce un numero"))
+// if(num < 0 || isNaN(num)) {
+//   alert("Introduce un número entero positivo")
+// } else {
+//   for(let i = 1; i <= num; i++) {
+//     for(let j = 1; j <= i; j++) {
+//       document.write("* ")
+//     }
+//     document.write("<br>")
+//   }
+// }
 
-    for(let i = 0; i < num; i++){
-      for(let j = 0; j <= j; j++) {
-        document.write("*")
-      }
-      document.write(`</br>`)
-    }
-} while(num < 0)
+// ! Ejercicio 10
+// for(let i = 5; i >= 1; i--) {
+//   for(let j = i; j >= 1; j--) {
+//     document.write(j)
+//   }
+//   document.write("<br>")
+// }
+
+// ! Ejercicio 11
+// let nombre = prompt("Introduce tu nombre");
+// let apellido1 = prompt("Introduce tu primer apellido");
+// let apellido2 = prompt("Introduce tu segundo apellido");
+// let salario = Number(prompt("Introduce tu salario"));
+// let edad = Number(prompt("Introduce tu edad"));
+
+// if (salario >= 1000 && salario <= 2000) {
+//   if (edad > 45) {
+//     console.log(`Nombre: ${nombre} ${apellido1} ${apellido2}`);
+//     console.log(`Salario: ${(salario += salario * 0.03)}`);
+//   } else {
+//     console.log(`Nombre: ${nombre} ${apellido1} ${apellido2}`);
+//     console.log(`Salario: ${(salario += salario * 0.1)}`);
+//   }
+// } else if (salario < 1000) {
+//   if (edad < 30) {
+//     console.log(`Nombre: ${nombre} ${apellido1} ${apellido2}`);
+//     console.log(`Salario: ${(salario += 1100)}`);
+//   } else if (edad >= 30 && edad <= 45) {
+//     console.log(`Nombre: ${nombre} ${apellido1} ${apellido2}`);
+//     console.log(`Salario: ${(salario += salario * 0.03)}`);
+//   } else {
+//     console.log(`Nombre: ${nombre} ${apellido1} ${apellido2}`);
+//     console.log(`Salario: ${(salario += salario * 0.15)}`);
+//   }
+// }
+
+// ! Ejercicio 12
+// let cadena = "Hoy es viernes";
+// let cadenaInvertida = "";
+
+// for (let i = cadena.length - 1; i >= 0; i--) {
+//   cadenaInvertida += cadena[i];
+// }
+
+// console.log(cadenaInvertida);
+
+// ! Ejercicio 13
+// let num1 = Number(prompt("Introduce el primer número"));
+// let num2 = Number(prompt("Introduce el segundo número"));
+// let num3 = Number(prompt("Introduce el tercer número"));
+
+// let media = (num1 + num2 + num3) / 3;
+
+// if (media >= 7) {
+//   console.log("Promocionado");
+// } else {
+//   console.log("No promocionado");
+// }
+
+// ! Ejercicio 14
+let lado = Number(prompt("Introduce el lado del cuadrado"));
+
+let perimetro = lado * 4;
+
+console.log(`El perímetro del cuadrado es: ${perimetro}`);
+
 
 // ! Ejercicio 19
 // let num1 = Number(prompt("Introduce el primer número"))
