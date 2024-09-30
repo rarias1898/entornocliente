@@ -170,11 +170,11 @@
 // }
 
 // ! Ejercicio 14
-let lado = Number(prompt("Introduce el lado del cuadrado"));
+// let lado = Number(prompt("Introduce el lado del cuadrado"));
 
-let perimetro = lado * 4;
+// let perimetro = lado * 4;
 
-console.log(`El perímetro del cuadrado es: ${perimetro}`);
+// console.log(`El perímetro del cuadrado es: ${perimetro}`);
 
 
 // ! Ejercicio 19
@@ -189,9 +189,11 @@ console.log(`El perímetro del cuadrado es: ${perimetro}`);
 // }
 
 // ! Ejercicio 20
-// let sueldo = Number(prompt("Introduce el sueldo"))
-// let antiguedad = Number(prompt("Introduce la antiguedad"))
+let sueldo = Number(prompt("Introduce el sueldo"))
+let antiguedad = Number(prompt("Introduce la antiguedad"))
 
-// if(sueldo < 500 && antiguedad >= 10) {
-//   console.log(sueldo += 20 * 10 /100)
-// }
+if(sueldo < 500 && antiguedad >= 10) {
+  console.log(sueldo += 20 * 10 /100)
+}else {
+  console.log(sueldo)
+}
