@@ -59,17 +59,51 @@
 // console.log(date4)
 
 // ! Ejercicio 5
-// let birthDate = prompt("Introduce tu fecha de naciemiento")
+// let birthDay = Number(prompt("Cual es el el día de tu cumple?"))
+// let birthMonth = Number(prompt("De que mes?"))
+// let birthYear = Number(prompt("De que año"))
 
-// let splitDate = birthDate.split("/")
-// console.log(splitDate[0])
+// let dateToday = new Date()
+// let yearToday = dateToday.getFullYear()
+// let monthToday = dateToday.getMonth() + 1
+// let dayToday = dateToday.getDate()
 
+// let age = yearToday - birthYear
+
+// if (monthToday < birthMonth) {
+//   age--
+// } else if (monthToday === birthMonth && dayToday < birthDay) {
+//   age--
+// }
+
+// console.log(`Tienes ${age} años`)
 
 // ! Ejercicio 6
+// let dateToday = new Date()
+// let day = dateToday.getDay()
+
+// let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+
+// console.log(day)
+// console.log(dias[day])
+
 
 // ! Ejercicio 7
+// let dateToday = new Date()
+// let year = dateToday.getFullYear()
+// let yearString = year.toString()
+// let lastTwo = yearString.slice(-2)
+
+// console.log(lastTwo)
 
 // ! Ejercicio 8
+// let moneda = Math.floor(Math.random() * (2 - 1 + 1)) + 1
+
+// if(moneda === 1) {
+//   console.log("Cara")
+// } else {
+//   console.log("Cruz")
+// }
 
 // ! Ejercicio 9
 // let userNum = Number(prompt("Dame un numero"))
@@ -100,14 +134,22 @@
 
 // let hora = dateToday.getHours()
 
+// if(hora >= 7 && hora < 12) {
+//   console.log(`Buenos días ${name}`)
+// }else if(hora >= 12 && hora < 20) {
+//   console.log(`Buenas tardes ${name}`)
+// }else if(hora >= 20) {
+//   console.log(`Buenas noches ${name}`)
+// }
+
 // ! Ejercicio 12
-let dateNow = new Date()
-anoActual = dateNow.getFullYear()
+// let dateNow = new Date()
+// anoActual = dateNow.getFullYear()
 
-let randomDay = Math.floor(Math.random() * (30 - 1 + 1)) + 1
-let randomMonth = Math.floor(Math.random() * (12 - 1 + 1)) + 1
-let randomYear = Math.floor(Math.random() * (anoActual - 2000 + 1)) + 2000
+// let randomDay = Math.floor(Math.random() * (30 - 1 + 1)) + 1
+// let randomMonth = Math.floor(Math.random() * (12 - 1 + 1)) + 1
+// let randomYear = Math.floor(Math.random() * (anoActual - 2000 + 1)) + 2000
 
-let NuevaFecha = new Date(randomYear, randomMonth, randomDay).toLocaleDateString()
+// let NuevaFecha = new Date(randomYear, randomMonth, randomDay).toLocaleDateString()
 
-console.log(NuevaFecha)
+// console.log(NuevaFecha)
