@@ -110,11 +110,23 @@ const changeColor1 = () => {
 }
 
 const changeColor2 = () => {
-  segundaVentana.document.body.style.backgroundColor="#EFC3CA "
+  segundaVentana.document.body.style.backgroundColor="#EFC3CA"
   primeraVentana.focus()
   segundaVentana.focus()
 }
 
 const saludo = () => {
-  window.opener.segundaVentana.document.write("Hola")
+  window.opener.segundaVentana.document.write("La ventana 1 te saluda")
+}
+
+const changeColorV2 = () => {
+  window.opener.segundaVentana.document.body.style.backgroundColor="#7DDA58"
+}
+
+const saludoV2 = () => {
+  window.opener.primeraVentana.document.write("La ventana 2 te saluda")
+}
+
+const changeV2Color = () => {
+  window.document.body.style.backgroundColor = "#5DE2E7"
 }
