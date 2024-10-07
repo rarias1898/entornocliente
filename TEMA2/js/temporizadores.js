@@ -58,21 +58,117 @@
 // }
 
 // ! Ejercicio 22
-let counter = 0;
-let ventana;
+// var counter = 0;
+// var ventana;
 
-const interval1 = setInterval(() => {
-  let randomTop = Math.floor(Math.random() * (800 - 1)) + 1;
-  let randomLetft = Math.floor(Math.random() * (800 - 1)) + 1;
-  ventana = window.open(
-    "",
-    "Prueba1",
-    `width=50, height=50, top=${randomTop}, letft=${randomLetft}`
-  );
+// let interval1 = setInterval(() => {
+//   let randomTop = Math.floor(Math.random() * (800 - 100)) + 100;
+//   let randomLeft = Math.floor(Math.random() * (800 - 200)) + 200;
+//   let randomColor = Math.floor(Math.random() * (999999 - 0)) + 200;
 
-  counter++;
-}, 2000);
+//   ventana = window.open(
+//     "",
+//     "Prueba1",
+//     `width=50, height=50, top=${randomTop}, left=${randomLeft}`
+//   );
+//     ventana.document.body.style.backgroundColor=`#${randomColor}`
+//     counter++;
 
-if (counter == 2000) {
-  clearInterval(interval1);
+// }, 2000);
+
+// let interval2 = setInterval(() => {
+//   ventana.close()
+// }, 3000);
+
+// ! Ejercicio 23
+// var ventana;
+// var timer = 10;
+
+// const abirVentanaSec = () => {
+//   ventana = window.open("", "Ventana", "width=400, height=200")
+//   ventana.document.write("Esto es la ventana 1")
+
+//   ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+
+//   let interval1 = setInterval(() => {
+//     timer--
+//     ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+
+//     if (timer == 0) {
+//       ventana.close()
+//       clearInterval(interval1)
+//       timer = 10
+//     }
+
+//   }, 1000);
+
+//   console.log(timer)
+// }
+
+// ! Ejercicio 24
+// var ventana;
+
+// const abirVentanaSec2 = () => {
+//   var timer = Number(document.getElementById("segundos").value)
+//   ventana = window.open("", "Ventana", "width=400, height=200")
+//   ventana.document.write("Esto es la ventana 1")
+
+//   ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+
+//   let interval1 = setInterval(() => {
+//     timer--
+//     ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+
+//     if (timer == 0) {
+//       ventana.close()
+//       clearInterval(interval1)
+//     }
+
+//   }, 1000);
+
+//   console.log(timer)
+// }
+
+// ! Ejercicio 25
+// var ventana;
+
+// const abrirVentana = () => {
+//   ventana = window.open("", "Venatana", "width=400, height=200");
+//   let result = document.getElementById("resultado");
+//   let timer = Number(document.getElementById("segundos").value);
+
+//   ventana.document.body.innerHTML += `${timer}`;
+
+//   let timerInterval = setInterval(() => {
+//     timer--;
+//     ventana.document.body.innerHTML += `${timer}`;
+
+//     if (timer == 0) {
+//       ventana.close();
+//       clearInterval(timerInterval);
+//       result.innerHTML = `Han pasado ${document.getElementById("segundos").value} segundos desde que se abrio la ventana`
+//     }
+//   }, 1000);
+// };
+
+// ! Ejercicio 26
+var ventana;
+
+const abrirVentana = () => {
+  ventana = window.open("emergente.html", "Venatana", "width=400, height=200");
+  let result = document.getElementById("cuentaAtras")
+  let timer = Number(document.getElementById("segundos").value);
+
+  ventana.document.innerHTML += `${timer}`
+
+  let timerInterval = setInterval(() => {
+    timer--
+    ventana.document.body.innerHTML += `${timer}`
+
+    if (timer == 0) {
+      ventana.close()
+      clearInterval(timerInterval)
+      result.innerHTML = `Han pasado ${document.getElementById("segundos").value} segundos desde que se abrio la ventana`
+    }
+  }, 1000);
 }
