@@ -116,7 +116,7 @@ const changeColor2 = () => {
 }
 
 const saludo = () => {
-  window.opener.segundaVentana.document.write("La ventana 1 te saluda")
+  window.opener.segundaVentana.document.body.innerHTML += "<p>La ventana 1 te saluda</p>"
 }
 
 const changeColorV2 = () => {
@@ -124,7 +124,7 @@ const changeColorV2 = () => {
 }
 
 const saludoV2 = () => {
-  window.opener.primeraVentana.document.write("La ventana 2 te saluda")
+  window.opener.primeraVentana.document.body.innerHTML += "<p>La ventana 2 te saluda</p>"
 }
 
 const changeV2Color = () => {
