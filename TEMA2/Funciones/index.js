@@ -65,18 +65,31 @@ const sumatorio = (num) => {
 // console.log(sumatorio(5))
 
 // ! Ejercicio 5
-const tabla = (f=10, c=4) => {
-
-  let total = ""
-
-  for (let i = 0; i < f; i++) {
-    for (let j = 0; j < c; j++) {
-      return total.document.body.innerHTML = "<h1>Hola</h1>"
-    }
+const dibujarTabla = (filas = 10, columnas = 4, colorBorde = "black") => {
+  const tabla = document.createElement("table");
+  tabla.className = "tabla";
+  tabla.style.border = `3px solid ${colorBorde}`;
+  
+  for (let i = 0; i < filas; i++) {
+      const fila = document.createElement("tr");
+      for (let j = 0; j < columnas; j++) {
+          const celda = document.createElement("td");
+          celda.style.border = `1px solid ${colorBorde}`;
+          fila.appendChild(celda);
+      }
+      tabla.appendChild(fila);
   }
+
+  document.body.appendChild(tabla);
 }
 
-// console.log(tabla(10, 4))
+dibujarTabla();
+
+dibujarTabla(20, 10);
+
+for (let i = 0; i < 10; i++) {
+  dibujarTabla(5, 4, "green");
+}
 
 // ! Ejercicio 6
 const esFinde = () => {
