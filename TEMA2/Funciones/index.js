@@ -47,7 +47,7 @@ const aleatorio = () => {
   }
 }
 
-// console.log(aleatorio())
+// aleatorio()
 
 // ! Ejercicio 4
 const sumatorio = (num) => {
@@ -62,7 +62,7 @@ const sumatorio = (num) => {
   return total
 }
 
-// console.log(sumatorio(5))
+console.log(sumatorio(10))
 
 // ! Ejercicio 5
 const dibujarTabla = (filas = 10, columnas = 4, colorBorde = "black") => {
@@ -83,13 +83,13 @@ const dibujarTabla = (filas = 10, columnas = 4, colorBorde = "black") => {
   document.body.appendChild(tabla);
 }
 
-dibujarTabla();
+// dibujarTabla();
 
-dibujarTabla(20, 10);
+// dibujarTabla(20, 10);
 
-for (let i = 0; i < 10; i++) {
-  dibujarTabla(5, 4, "green");
-}
+// for (let i = 0; i < 10; i++) {
+//   dibujarTabla(5, 4, "green");
+// }
 
 // ! Ejercicio 6
 const esFinde = () => {
@@ -97,10 +97,10 @@ const esFinde = () => {
 
   if( finde == 0 || finde == 6) {
     primeraVentana = window.open("", "Ventana 1", "width=400, height=400")
-    primeraVentana.document.write("😊😊")
+    primeraVentana.document.write("<img src='./images/DashboardWireframe.png' width='300px' />")
   }else {
     segundaVentana = window.open("", "Ventana 2", "width=400, height=400")
-    segundaVentana.window.document.write("😢😢")
+    segundaVentana.window.document.write("<img src='./images/cara.png' width='300px' />")
   }
 }
 

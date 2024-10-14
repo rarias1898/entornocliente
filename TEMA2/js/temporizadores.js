@@ -85,18 +85,19 @@
 // var timer = 10;
 
 // const abirVentanaSec = () => {
-//   ventana = window.open("", "Ventana", "width=400, height=200")
+//   ventana = window.open("", "Ventana", "width=400, height=200, left=400, top=400")
 //   ventana.document.write("Esto es la ventana 1")
 
-//   ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+//   ventana.opener.document.body.innerHTML += `<h1>La ventana se cerrara en ${timer}</h1>`
 
 //   let interval1 = setInterval(() => {
 //     timer--
-//     ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+//     ventana.opener.document.body.innerHTML = `<h1>La ventana se cerrará en ${timer}</h1>`
 
 //     if (timer == 0) {
 //       ventana.close()
 //       clearInterval(interval1)
+//       ventana.opener.document.body.innerHTML = `<h1>La ventana se ha cerrado</h1>`
 //       timer = 10
 //     }
 
@@ -117,10 +118,11 @@
 
 //   let interval1 = setInterval(() => {
 //     timer--
-//     ventana.opener.document.body.innerHTML += `<h1>${timer}</h1>`
+//     ventana.opener.document.body.innerHTML = `<h1>La ventana se cerrará en ${timer}</h1>`
 
 //     if (timer == 0) {
 //       ventana.close()
+//       ventana.opener.document.body.innerHTML = `<h1>La ventana se ha cerrado</h1>`
 //       clearInterval(interval1)
 //     }
 
@@ -141,7 +143,7 @@
 
 //   let timerInterval = setInterval(() => {
 //     timer--;
-//     ventana.document.body.innerHTML += `${timer}`;
+//     ventana.document.body.innerHTML = `${timer}`;
 
 //     if (timer == 0) {
 //       ventana.close();
@@ -163,7 +165,7 @@ const abrirVentana = () => {
 
   let timerInterval = setInterval(() => {
     timer--
-    ventana.document.body.innerHTML += `${timer}`
+    ventana.document.body.innerHTML = `${timer}`
 
     if (timer == 0) {
       ventana.close()
