@@ -109,12 +109,17 @@ const abrirVentana = () => {
   nuevaVentana = window.open("", "Ventana 3", "width=700, height=300")
   let numero = nuevaVentana.window.prompt("Introduce un numero del 1 al 20")
 
-  if (numero) {
+  if (numero <= 20 && isNaN) {
+    if (numero) {
+      nuevaVentana.close()
+    }
+  
+    if (nuevaVentana.closed) {
+      imptNumeros(numero)
+    }
+  }else {
     nuevaVentana.close()
-  }
-
-  if (nuevaVentana.closed) {
-    imptNumeros(numero)
+    alert("El numero es mayor que 20 o no es un número")
   }
 }
 
@@ -123,6 +128,6 @@ const imptNumeros = (num) => {
 
   for (let i = 1; i <= num; i++) {
     resultado = `<ul><li style="list-style-type: none">${i}</li></ul>`
-    document.write(resultado)
+    document.body.innerHTML += resultado
   }
 }
