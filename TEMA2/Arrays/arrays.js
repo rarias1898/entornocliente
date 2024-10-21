@@ -129,3 +129,172 @@ const invertirPalabra = () => {
 };
 
 // console.log(invertirPalabra())
+
+// ! Ejercicio 8
+const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const arrVacio = []
+const string1 = "Hola"
+
+const isOdd = (array) => {
+  let parArr = []
+  let imparArr = []
+
+  // if (!array.isArray) {
+  //   alert("No es un array")
+  //   return
+  // }
+
+  if (array.length == 0) {
+    alert("El array no puede estar vacio")
+    return
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
+      parArr.push(array[i])
+    }else{
+      imparArr.push(array[i])
+    }
+  }
+  console.log(parArr)
+  console.log(imparArr)
+}
+
+// console.log(isOdd(array1))
+
+// ! Ejercicio 9
+const factura = {
+  "numero": 1,
+  "cliente": "cliente1",
+  "divisa": "EUR",
+  "subtotal": 25,
+  "iva": 1.25,
+  calculoTotal:  function() {
+    let result = this.subtotal + this.iva
+    return(`El resultado total es ${result}`)
+  }
+}
+
+// console.log(factura.calculoTotal())
+// console.log(`La factura ${factura.numero} tiene un importe de ${factura.subtotal} ${factura.divisa}`)
+
+// ! Ejercicio 10
+const user = { }
+
+user.name = "John"
+user.surname = "Smith"
+user.name = "Peter"
+delete user.name
+// console.log(user)
+
+// ! Ejercicio 11
+const productos = [
+  { nombre: "producto1", cantidad: 10, precio: 25 },
+  { nombre: "producto2", cantidad: 30, precio: 13 },
+]
+
+const productos2 = []
+
+const valorTotal = (obj, obj2) => {
+  
+  obj.forEach(element => {
+    total = element.cantidad * element.precio
+    obj2.nombre = element.nombre
+    obj2.total = total
+  });
+}
+
+valorTotal(productos, productos2)
+// console.log(productos2)
+
+// ! Ejercicio 12
+let salarios = {
+  John: 100,
+  Ann: 160,
+  Peter: 130
+}
+
+const sumaSalarios = (salarios) => {
+  let total = 0
+
+  if(salarios.length == 0) {
+    return total
+  }
+
+  for (let key in salarios) {
+    total += salarios[key]
+  }
+  return total
+}
+
+// console.log(sumaSalarios(salarios));
+
+// ! Ejercicio 13
+const userEdades = [
+  {nombre: "Angel", edad: 28},
+  {nombre: "Pepe", edad: 17},
+  {nombre: "Diego", edad: 20},
+  {nombre: "Raul", edad: 15}
+]
+
+const mayorEdad = (user) => {
+  const mayores = []
+  for(let i in user) {
+    if(user[i].edad >= 18) {
+      mayores.push(user[i].nombre + " (" + user[i].edad + " años)")
+    }
+  }
+
+  return mayores
+}
+
+// console.log(mayorEdad(userEdades))
+
+// ! Ejercicio 14
+const libros = [
+  { titulo: "titulo1", numeroPaginas: 350 },
+  { titulo: "titulo2", numeroPaginas: 700 },
+  { titulo: "titulo3", numeroPaginas: 245 },
+  { titulo: "titulo4", numeroPaginas: 500 }
+]
+
+const masDeX = (libros) => {
+  const masDe300 = libros.filter(e => {
+    if(e.numeroPaginas > 300) {
+      return true
+    }
+  })
+
+  const soloNombre = masDe300.forEach(element => {
+    console.log(element.titulo)
+  })
+
+  return soloNombre
+}
+
+// masDeX(libros)
+
+// ! Ejercicio 15
+const estudiantes = [
+  { nombre: "Angel", calificaciones: [5, 7, 9, 5, 4] },
+  { nombre: "Pedro", calificaciones: [10, 5, 7, 9, 2] }
+]
+
+const operaciones = (estudiantes) => {
+  let total = 0
+
+  for(let i in estudiantes) {
+    let calif = estudiantes[i].calificaciones
+
+    console.log(calif)
+
+    calif.map(e => {
+      total += e
+    })
+
+  }
+
+  return total
+}
+
+console.log(operaciones(estudiantes))
