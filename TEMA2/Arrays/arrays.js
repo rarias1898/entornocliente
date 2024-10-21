@@ -275,26 +275,84 @@ const masDeX = (libros) => {
 // masDeX(libros)
 
 // ! Ejercicio 15
+
+/** Tienes un array de objetos que representan estudiantes. Cada objeto de estudiante tiene un nombre y un
+array de calificaciones. Utiliza las funciones de arrays para realizar las siguientes tareas:
+1. Calcular el promedio de calificaciones para cada estudiante. Para cada estudiante, calcular su
+media. Debe devolver un array con objetos con el nombre y la media. Imprimir.
+2. Del array obtenido en el punto 1, filtrar los estudiantes que tienen un promedio superior a 7.
+3. Imprimir el nombre de los estudiantes que cumplen con el criterio de promedio anterior.
+ */
+
 const estudiantes = [
   { nombre: "Angel", calificaciones: [5, 7, 9, 5, 4] },
-  { nombre: "Pedro", calificaciones: [10, 5, 7, 9, 2] }
+  { nombre: "Pedro", calificaciones: [10, 7, 7, 9, 7] },
+  { nombre: "Diego", calificaciones: [5, 7, 9, 5, 4] },
+  { nombre: "Raul", calificaciones: [10, 7, 7, 9, 7] }
 ]
 
-const operaciones = (estudiantes) => {
+const promedio = (estudiantes) => {
   let total = 0
+  let media = 0
+  let arr = []
 
   for(let i in estudiantes) {
     let calif = estudiantes[i].calificaciones
 
-    console.log(calif)
+    for(let j in calif) {
+      total += calif[j]
+    }
 
-    calif.map(e => {
-      total += e
-    })
-
+    media = total / calif.length
+    arr.push({nombre: estudiantes[i].nombre, media: media})
   }
 
-  return total
+  return arr
 }
 
-console.log(operaciones(estudiantes))
+const filtrar = (estudiantes) => {
+  const filtrados = estudiantes.filter(e => e.media > 7)
+  return filtrados
+}
+
+const soloNombre = (estudiantes) => {
+  const nombres = estudiantes.forEach(e => {
+    console.log(e.nombre)
+  })
+  return nombres
+}
+
+
+// console.log(promedio(estudiantes))
+// console.log(filtrar(promedio(estudiantes)))
+// soloNombre(filtrar(promedio(estudiantes)))
+
+// ! Ejercicio 16
+const products = [
+  { nombre: "product1", precio: 20, categoria: { nombre: "categoria1", descripcion: "descripcion1" } },
+  { nombre: "product2", precio: 30, categoria: { nombre: "categoria2", descripcion: "descripcion2" } },
+  { nombre: "product3", precio: 56, categoria: { nombre: "categoria1", descripcion: "descripcion3" } }
+]
+
+const filtrarCategoria = (product) => {
+  const filtrados = product.filter(e => e.categoria.nombre == "categoria1")
+  console.log(filtrados)
+}
+
+// filtrarCategoria(products)
+
+// ! Ejercicio 17
+const crearObjeto = () => {
+  const taxi = {
+    tipoMotor: "motor1",
+    numeroPasajeros: 5,
+    carga: 50,
+    velocidad: 200,
+    ruedas: 4,
+    saludar: function() {
+      console.log(`Hola soy un taxi de ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros`) 
+    }
+  }
+
+  taxi.saludar()
+}
