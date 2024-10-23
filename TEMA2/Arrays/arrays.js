@@ -275,15 +275,6 @@ const masDeX = (libros) => {
 // masDeX(libros)
 
 // ! Ejercicio 15
-
-/** Tienes un array de objetos que representan estudiantes. Cada objeto de estudiante tiene un nombre y un
-array de calificaciones. Utiliza las funciones de arrays para realizar las siguientes tareas:
-1. Calcular el promedio de calificaciones para cada estudiante. Para cada estudiante, calcular su
-media. Debe devolver un array con objetos con el nombre y la media. Imprimir.
-2. Del array obtenido en el punto 1, filtrar los estudiantes que tienen un promedio superior a 7.
-3. Imprimir el nombre de los estudiantes que cumplen con el criterio de promedio anterior.
- */
-
 const estudiantes = [
   { nombre: "Angel", calificaciones: [5, 7, 9, 5, 4] },
   { nombre: "Pedro", calificaciones: [10, 7, 7, 9, 7] },
