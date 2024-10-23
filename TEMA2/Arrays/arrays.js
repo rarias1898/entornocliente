@@ -266,7 +266,7 @@ const masDeX = (libros) => {
   })
 
   const soloNombre = masDe300.forEach(element => {
-    console.log(element.titulo)
+    console.log(`El ${element.titulo} tiene mas de 300 páginas`)
   })
 
   return soloNombre
@@ -279,7 +279,7 @@ const estudiantes = [
   { nombre: "Angel", calificaciones: [5, 7, 9, 5, 4] },
   { nombre: "Pedro", calificaciones: [10, 7, 7, 9, 7] },
   { nombre: "Diego", calificaciones: [5, 7, 9, 5, 4] },
-  { nombre: "Raul", calificaciones: [10, 7, 7, 9, 7] }
+  { nombre: "Raul", calificaciones: [10, 7, 7, 9, 7] },
 ]
 
 const promedio = (estudiantes) => {
@@ -320,17 +320,25 @@ const soloNombre = (estudiantes) => {
 
 // ! Ejercicio 16
 const products = [
-  { nombre: "product1", precio: 20, categoria: { nombre: "categoria1", descripcion: "descripcion1" } },
-  { nombre: "product2", precio: 30, categoria: { nombre: "categoria2", descripcion: "descripcion2" } },
-  { nombre: "product3", precio: 56, categoria: { nombre: "categoria1", descripcion: "descripcion3" } }
+  { nombre: "movil", precio: 650, categoria: { nombre: "informatica", descripcion: "Teléfono movil de última generación" } },
+  { nombre: "aceituna", precio: 1, categoria: { nombre: "alimentacion", descripcion: "Lata de aceitunas marca lidl" } },
+  { nombre: "portatil", precio: 1200, categoria: { nombre: "informatica", descripcion: "Portátil i7 13700K" } }
 ]
 
 const filtrarCategoria = (product) => {
-  const filtrados = product.filter(e => e.categoria.nombre == "categoria1")
+  const filtrados = product.filter(e => e.categoria.nombre == "informatica")
   console.log(filtrados)
+  return filtrados
+}
+
+const imprimirDetalles = (product) => {
+  const detalles = product.map((producto) => {
+    console.log(`El producto ${producto.nombre} con un precio de ${producto.precio}€ de la categoria ${producto.categoria.nombre}, su descripcion es: ${producto.categoria.descripcion}`)
+  })
 }
 
 // filtrarCategoria(products)
+// imprimirDetalles(filtrarCategoria(products))
 
 // ! Ejercicio 17
 const crearObjeto = () => {
@@ -341,7 +349,7 @@ const crearObjeto = () => {
     velocidad: 200,
     ruedas: 4,
     saludar: function() {
-      console.log(`Hola soy un taxi de ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros`) 
+      alert(`Hola soy un taxi de ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros`) 
     }
   }
 
