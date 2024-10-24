@@ -5,6 +5,33 @@ const inputMayus = (e) => {
   e.target.value = texto.toUpperCase()
 } 
 
-document.getElementById('ejercicio1').addEventListener("blur", inputMayus);
+// document.getElementById('ejercicio1').addEventListener("blur", inputMayus);
 
 // ! Ejercicio 2
+// let input1 = document.getElementById('input1')
+// let input2 = document.getElementById('input2')
+// input1.style.color = "red"
+// input2.style.color = "red"
+
+const inputColor = (e) => {
+  e.target.style.color = "black"
+}
+
+// input1.addEventListener("blur", inputColor)
+// input2.addEventListener("blur", inputColor)
+
+const pulsame = (e) => {
+  e.target.style.color = "red"
+}
+
+const cambiame = (e) => {
+  e.target.style.borderColor = "green"
+}
+
+const cambiameNaranja = (e) => {
+  e.target.style.borderColor = "orange"
+}
+
+// document.getElementById('button1').addEventListener("click", pulsame)
+// document.getElementById('button2').addEventListener("mouseover", cambiame)
+// document.getElementById('button2').addEventListener("mouseout", cambiameNaranja)
