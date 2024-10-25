@@ -25,7 +25,7 @@ const pulsame = (e) => {
 }
 
 const cambiame = (e) => {
-  e.target.style.borderColor = "green"
+  e.target.style.borderColor = "blue"
 }
 
 const cambiameNaranja = (e) => {
