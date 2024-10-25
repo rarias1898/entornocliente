@@ -347,7 +347,7 @@ const crearObjeto = () => {
     numeroPasajeros: 5,
     carga: 50,
     velocidad: 200,
-    ruedas: 4,
+    ruedas: 5,
     saludar: function() {
       alert(`Hola soy un taxi de ${this.ruedas} ruedas y ${this.numeroPasajeros} pasajeros`) 
     }
