@@ -10,22 +10,27 @@
     <title>Eventos</title>
 
     <style>
+      body {
+        margin-top: 30px;
+      }
+
       .boton {
         height: 50px;
         width: 50px;
+        margin-top: 10px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- Ejercicio 1 -->
-       <!-- <form action="">
+      <!-- <form action="">
         <label for="ejercicio1">Nombre</label>
         <input type="text" name="ejercicio1" id="ejercicio1">
        </form> -->
-  
-       <!-- Ejercicio 2 -->
-        <!-- <label for="input1">Input 1</label>
+
+      <!-- Ejercicio 2 -->
+      <!-- <label for="input1">Input 1</label>
         <input type="text" name="input1" id="input1">
         <br><br>
         <label for="input2">Input 2</label>
@@ -33,9 +38,9 @@
         <br><br>
         <button id="button1">Pulsame</button>
         <button id="button2">Cambia</button> -->
-  
-        <!-- Ejercicio 3 -->
-         <!-- <form action="">
+
+      <!-- Ejercicio 3 -->
+      <!-- <form action="">
           <input type="checkbox" name="ej3" value="1">
           <input type="checkbox" name="ej3" value="2">
           <input type="checkbox" name="ej3" value="3">
@@ -46,13 +51,72 @@
           <input type="button" value="Validar" onclick="validar()">
          </form> -->
 
-         <!-- Ejercicio 4 -->
-          <!-- <button onclick="sumar()">Sumar</button>
+      <!-- Ejercicio 4 -->
+      <!-- <button onclick="sumar()">Sumar</button>
           <button onclick="restar()">Restar</button>
 
           <div id="numero">
             5
           </div> -->
+
+      <!-- Ejercicio 5 -->
+      <!-- <form>
+            <input type="button" class="boton" value="0" id="boton1" />
+            <input type="button" class="boton" value="1" id="boton2" />
+            <input type="button" class="boton" value="2" id="boton3" />
+            <input type="button" class="boton" value="3" id="boton4" />
+            <input type="button" class="boton" value="4" id="boton5" />
+            <input type="button" class="boton" value="5" id="boton6" />
+            <input type="button" class="boton" value="6" id="boton7" />
+            <input type="button" class="boton" value="7" id="boton8" />
+            <input type="button" class="boton" value="8" id="boton9" />
+            <input type="button" class="boton" value="9" id="boton10" />
+           </form>
+           <div id="valor"> -->
+
+      <!-- Ejercicio 6 y 7 -->
+      <!-- <form>
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre">
+              <div id="error-nombre"></div>
+              <label for="apellido">Apellido</label>
+              <input type="text" name="apellido" id="apellido">
+              <div id="error-apellido"></div>
+
+              <input type="submit" value="Validar" id="validar">
+            </form> -->
+
+      <!-- Ejercicio 8 -->
+      <form
+        name="formulario"
+        id="formulario"
+        action="http://www.google.es"
+        method="get"
+      >
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" />
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" />
+
+        <label for="edad">Edad:</label>
+        <input name="edad" type="text" id="edad" maxlength="3" />
+
+        <label for="provincia">Provincia:</label>
+        <select name="provincia" id="provincia">
+          <option value="0" selected="selected">Seleccione Provincia</option>
+          <option value="H">Huesca</option>
+          <option value="ZA">Zaragoza</option>
+          <option value="T">Teruel</option>
+        </select>
+
+        <fieldset>
+          <div id="resultado"></div>
+          <input type="reset" name="limpiar" id="limpiar" value="Limpiar" />
+          <input type="submit" name="enviar" id="enviar" value="Enviar" />
+        </fieldset>
+      </form>
+      
     </div>
 
     <script src="./eventos.js"></script>

@@ -71,15 +71,96 @@ const validar = () => {
 // }
 
 // ! Ejercicio 5
-const form = document.createElement("form")
+// const mostrarValor = (e) => {
+//   e.preventDefault()
+//   const valor = document.getElementById("valor")
+//   const valorBoton = e.target.value
 
-for (let i = 0; i < 9; i++) {
-  const button = document.createElement("button")
-  button.setAttribute("class", "boton")
+//   valor.innerText = `El valor del boton es: ${valorBoton}`
+// }
 
-  form.appendChild(button)
+// for (let i = 0; i < 10; i++) {
+  
+//   document.getElementById("boton1").addEventListener("click", mostrarValor)
+//   document.getElementById("boton2").addEventListener("click", mostrarValor)
+//   document.getElementById("boton3").addEventListener("click", mostrarValor)
+//   document.getElementById("boton4").addEventListener("click", mostrarValor)
+//   document.getElementById("boton5").addEventListener("click", mostrarValor)
+//   document.getElementById("boton6").addEventListener("click", mostrarValor)
+//   document.getElementById("boton7").addEventListener("click", mostrarValor)
+//   document.getElementById("boton8").addEventListener("click", mostrarValor)
+//   document.getElementById("boton9").addEventListener("click", mostrarValor)
+//   document.getElementById("boton10").addEventListener("click", mostrarValor)
+// }
+
+// ! Ejercicio 6 y 7
+// const validando = (e) => {
+//   e.preventDefault()
+//   const nombre = document.getElementById("nombre").value
+//   const apellidos = document.getElementById("apellido").value
+//   const errorNombre = document.getElementById("error-nombre")
+//   const errorApellido = document.getElementById("error-apellido")
+//   let Val = 0
+
+//   if (nombre.charAt(0) != 'a' && nombre.charAt(0) != 'e' && nombre.charAt(0) != 'i' && nombre.charAt(0) != 'o' && nombre.charAt(0) != 'u' ) {
+//     errorNombre.innerText = `El campo no comienza con una vocal`
+//     errorNombre.style.color = "red"
+//     Val++
+//   }
+  
+//   if (!apellidos.trim().includes(" ")) {
+//     errorApellido.innerText = `El campo tiene que tener 2 o mas palabras`
+//     errorApellido.style.color = "red"
+//     Val++
+//   }
+
+//   if (Val === 0) {
+//     window.location.href = "https://ceu.es"
+//   }
+// }
+
+// document.getElementById("validar").addEventListener("click", validando)
+
+// ! Ejercicio 8
+const enviarDatos = (e) => {
+  e.preventDefault()
+  const nombre = document.getElementById("nombre").value.trim()
+  const apellidos = document.getElementById("apellidos").value.trim()
+  const edad = document.getElementById("edad").value
+  const provincia = document.getElementById("provincia").value
+  
+  const resultado = document.getElementById("resultado")
+  resultado.style.color = "red"
+
+  if (nombre == "") {
+    resultado.innerText = "El nombre no puede estar vacio"
+    return
+  }
+
+  if (apellidos == "") {
+    resultado.innerText = "Los apellidos no pueden estar vacios"
+    return
+  }
+
+  if (edad == "" ||isNaN(edad) || Number(edad) < 0 || Number(edad) > 106) {
+    resultado.innerText = "La edad no puede estar vacia"
+    return
+  }
+
+  if (provincia == 0) {
+    resultado.innerText = "Seleccione una provincia"
+    return
+  }
+
+  if (resultado.innerText == "") {
+    const enviar = confirm("Quieres enviar el formulario?")
+
+    if (enviar) {
+      document.getElementById("formulario").submit();
+    }else {
+      resultado.innerText = "Envío cancelado por el usuario"
+    }
+  }
 }
 
-document.body.appendChild(form)
-
-const botones = document.getElementById("boton").addEventListener("click",)
+document.getElementById("enviar").addEventListener("click", enviarDatos)
