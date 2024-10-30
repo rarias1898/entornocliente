@@ -81,16 +81,8 @@ const validar = () => {
 
 // for (let i = 0; i < 10; i++) {
   
-//   document.getElementById("boton1").addEventListener("click", mostrarValor)
-//   document.getElementById("boton2").addEventListener("click", mostrarValor)
-//   document.getElementById("boton3").addEventListener("click", mostrarValor)
-//   document.getElementById("boton4").addEventListener("click", mostrarValor)
-//   document.getElementById("boton5").addEventListener("click", mostrarValor)
-//   document.getElementById("boton6").addEventListener("click", mostrarValor)
-//   document.getElementById("boton7").addEventListener("click", mostrarValor)
-//   document.getElementById("boton8").addEventListener("click", mostrarValor)
-//   document.getElementById("boton9").addEventListener("click", mostrarValor)
-//   document.getElementById("boton10").addEventListener("click", mostrarValor)
+//   document.getElementById(`boton${i}`).addEventListener("click", mostrarValor)
+
 // }
 
 // ! Ejercicio 6 y 7
@@ -122,45 +114,102 @@ const validar = () => {
 // document.getElementById("validar").addEventListener("click", validando)
 
 // ! Ejercicio 8
-const enviarDatos = (e) => {
-  e.preventDefault()
-  const nombre = document.getElementById("nombre").value.trim()
-  const apellidos = document.getElementById("apellidos").value.trim()
-  const edad = document.getElementById("edad").value
-  const provincia = document.getElementById("provincia").value
+// const enviarDatos = (e) => {
+//   e.preventDefault()
+//   const nombre = document.getElementById("nombre").value.trim()
+//   const apellidos = document.getElementById("apellidos").value.trim()
+//   const edad = document.getElementById("edad").value
+//   const provincia = document.getElementById("provincia").value
   
-  const resultado = document.getElementById("resultado")
-  resultado.style.color = "red"
+//   const resultado = document.getElementById("resultado")
+//   resultado.style.color = "red"
 
-  if (nombre == "") {
-    resultado.innerText = "El nombre no puede estar vacio"
-    return
-  }
+//   if (nombre == "") {
+//     resultado.innerText = "El nombre no puede estar vacio"
+//     return
+//   }
 
-  if (apellidos == "") {
-    resultado.innerText = "Los apellidos no pueden estar vacios"
-    return
-  }
+//   if (apellidos == "") {
+//     resultado.innerText = "Los apellidos no pueden estar vacios"
+//     return
+//   }
 
-  if (edad == "" ||isNaN(edad) || Number(edad) < 0 || Number(edad) > 106) {
-    resultado.innerText = "La edad no puede estar vacia"
-    return
-  }
+//   if (edad == "" ||isNaN(edad) || Number(edad) < 0 || Number(edad) > 106) {
+//     resultado.innerText = "La edad no puede estar vacia"
+//     return
+//   }
 
-  if (provincia == 0) {
-    resultado.innerText = "Seleccione una provincia"
-    return
-  }
+//   if (provincia == 0) {
+//     resultado.innerText = "Seleccione una provincia"
+//     return
+//   }
 
-  if (resultado.innerText == "") {
-    const enviar = confirm("Quieres enviar el formulario?")
+//   if (resultado.innerText == "") {
+//     const enviar = confirm("Quieres enviar el formulario?")
 
-    if (enviar) {
-      document.getElementById("formulario").submit();
-    }else {
-      resultado.innerText = "Envío cancelado por el usuario"
-    }
-  }
+//     if (enviar) {
+//       document.getElementById("formulario").submit();
+//     }else {
+//       resultado.innerText = "Envío cancelado por el usuario"
+//     }
+//   }
+// }
+
+// const limpiarDatos = (e) => {
+//   e.target.reset()
+// }
+
+// document.getElementById("enviar").addEventListener("click", enviarDatos)
+// document.getElementById("limpiar").addEventListener("click", limpiarDatos)
+
+// ! Ejercicio 9
+// var ventanaDatos;
+// const botonVentana = document.getElementById("abrirPagina").addEventListener("click", () => {
+//   ventanaDatos = window.open("", "datos.html", "width=400, height=300")
+
+//   ventanaDatos.document.write('<label for="nombre">Nombre:</label>')
+//   ventanaDatos.document.write('<input type="text" name="nombre" id="nombre" />')
+
+//   ventanaDatos.document.write('<label for="apellido">Apellido:</label>')
+//   ventanaDatos.document.write('<input type="text" name="apellido" id="apellido" />')
+
+//   ventanaDatos.document.write('<label for="fecha">Fecha:</label>')
+//   ventanaDatos.document.write('<input type="date" name="fecha" id="fecha" />')
+
+//   ventanaDatos.document.write('<button id="botonMostrar">Mostrar</button>')
+
+//   ventanaDatos.document.getElementById("botonMostrar").addEventListener("click", (e) => {
+    // const resultado = ventanaDatos.opener.document.getElementById("resultado")
+
+//     const nombre = ventanaDatos.document.getElementById("nombre").value
+//     const apellido = ventanaDatos.document.getElementById("apellido").value
+//     const fecha = ventanaDatos.document.getElementById("fecha").value
+
+//     resultado.innerHTML += `${nombre} ${apellido}, ${fecha}`
+//     ventanaDatos.close() 
+//   })
+// });
+
+// ! Ejercicio 10
+var temporizador;
+const iniciarContador = (e) => {
+  let contador = document.getElementById("temporizador").innerHTML
+
+  temporizador = setInterval(() => {
+    contador--
+    document.getElementById("temporizador").innerHTML = contador
+  }, 1000);
 }
 
-document.getElementById("enviar").addEventListener("click", enviarDatos)
+const pausarContador = (e) => {
+  clearInterval(temporizador)
+}
+
+const reiniciarContador = (e) => {
+  document.getElementById("temporizador").innerHTML = 30
+  clearInterval(temporizador)
+}
+
+const iniciar = document.getElementById("iniciar").addEventListener("click", iniciarContador)
+const pausar = document.getElementById("pausar").addEventListener("click", pausarContador)
+const reiniciar = document.getElementById("reiniciar").addEventListener("click", reiniciarContador)
