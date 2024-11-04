@@ -63,12 +63,11 @@
 
 // ! Ejercicio 6
 document.getElementById("miForm").addEventListener("submit", (e) => {
-  e.preventDefault(); // Evitar el envío del formulario
+  e.preventDefault();
 
   const radios = document.getElementsByName("rad1");
   let seleccion = null;
 
-  // Verificar cuál de los radio buttons está seleccionado
   for (let radio of radios) {
       if (radio.checked) {
           seleccion = radio.value;
