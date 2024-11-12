@@ -96,7 +96,7 @@
 //   }
 // })
 
-// ! Ejercicio 17
+// ! Ejercicio 17 y 18 y 19
 const objetoTabla = [
   {
     id: "tr1",
@@ -135,11 +135,48 @@ for (let i = 0; i < objetoTabla.length; i++) {
 
   cuerpoTabla.appendChild(tr)
 
-  td.innerText = `${objetoTabla[i].nombre}`
-  td2.innerText = `${objetoTabla[i].precio}`
-  td3.innerText = `${objetoTabla[i].codigo}`
+  td.innerText = objetoTabla[i].nombre
+  td2.innerText = objetoTabla[i].precio
+  td3.innerText = objetoTabla[i].codigo
+  tr.id = objetoTabla[i].id
 
   tr.appendChild(td)
   tr.appendChild(td2)
   tr.appendChild(td3)
 }
+
+// ? Parte del ejercicio 18
+document.getElementById("addCk").addEventListener("click", () => {
+  const theadTr = document.getElementsByTagName("table")[0].firstElementChild.firstElementChild
+  const th = document.createElement("th")
+  th.innerText = "Checkbox"
+  theadTr.appendChild(th)
+
+  for (let i = 1; i < objetoTabla.length + 1; i++) {
+    const tr = document.getElementById(`tr${i}`)
+    const td = document.createElement("td")
+    const ck = document.createElement("input")
+    ck.type = "checkbox"
+    ck.name = "marcar"
+    ck.id = `checkbox${i}`
+
+    td.appendChild(ck)
+    tr.appendChild(td)
+  }
+  console.log(cuerpoTabla)
+})
+
+// ? Parte del ejercicio 19
+document.getElementById("marcarCk").addEventListener("click", () => {
+  for (let i = 1; i < objetoTabla.length + 1; i++) {
+    const ck = document.getElementById(`checkbox${i}`)
+    ck.checked = true
+  }
+})
+
+document.getElementById("desmarcarCk").addEventListener("click", () => {
+  for (let i = 1; i < objetoTabla.length + 1; i++) {
+    const ck = document.getElementById(`checkbox${i}`)
+    ck.checked = false
+  }
+})

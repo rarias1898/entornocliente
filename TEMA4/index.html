@@ -6,6 +6,16 @@
     <title>DOM</title>
   </head>
   <body>
+    <style>
+      table {
+        border: 1px solid black;
+      }
+
+      th, tr, td {
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
     <!-- Ejercicio 1 -->
     <!-- <div id="myDIV">
       <p>First p element</p>
@@ -44,7 +54,7 @@
     <p id="contenidos_3" >contenidos 3</p>
     <a href="#" id="enlace_3">Ocultar Contenidos</a> -->
 
-    <!-- Ejercicio 17 -->
+    <!-- Ejercicio 17 y 18 y 19 -->
     <h1>Tabla HTML dibujada con JS</h1>
     <table>
       <thead>
@@ -58,6 +68,12 @@
 
       </tbody>
     </table>
+    <br>
+    <button id="addCk">Añadir</button>
+    <br><br>
+    <button id="marcarCk">marcar Checkbox</button>
+    <button id="desmarcarCk">Desmarcar ckeckbox</button>
+    <button id="borrarFilas">Eliminar filas con checkbox</button>
 
     <script src="./index.js"></script>
   </body>
