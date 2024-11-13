@@ -180,3 +180,37 @@ document.getElementById("desmarcarCk").addEventListener("click", () => {
     ck.checked = false
   }
 })
+
+document.getElementById("borrarFilas").addEventListener("click", () => {
+  for (let i = 1; i < objetoTabla.length + 1; i++) {
+    const ck = document.getElementById(`checkbox${i}`)
+    if (ck.checked == true) {
+      ck.parentElement.parentElement.remove()
+    }
+  }
+})
+
+// ! Ejercicio 20
+document.getElementById("add").addEventListener("click", () => {
+  const nombreN = document.getElementById("nombreN").value
+  const precioN = document.getElementById("precioN").value
+  const codigoN = document.getElementById("codigoN").value
+
+  for (let i = 0; i < 1; i++) {
+    const td = document.createElement("td")
+    const td2 = document.createElement("td")
+    const td3 = document.createElement("td")
+    const tr = document.createElement("tr")
+  
+    cuerpoTabla.appendChild(tr)
+  
+    td.innerText = nombreN
+    td2.innerText = precioN
+    td3.innerText = codigoN
+    tr.id = codigoN
+  
+    tr.appendChild(td)
+    tr.appendChild(td2)
+    tr.appendChild(td3)
+  }
+})

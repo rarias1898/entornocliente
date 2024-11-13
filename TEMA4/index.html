@@ -11,7 +11,9 @@
         border: 1px solid black;
       }
 
-      th, tr, td {
+      th,
+      tr,
+      td {
         text-align: center;
         border: 1px solid black;
       }
@@ -54,8 +56,29 @@
     <p id="contenidos_3" >contenidos 3</p>
     <a href="#" id="enlace_3">Ocultar Contenidos</a> -->
 
-    <!-- Ejercicio 17 y 18 y 19 -->
+    <!-- Ejercicio 17 y 18 y 19 y 20 -->
     <h1>Tabla HTML dibujada con JS</h1>
+    <div>
+      <input
+        type="text"
+        id="nombreN"
+        placeholder="Por favor escriba el nombre del producto"
+      />
+      <input
+        type="text"
+        id="precioN"
+        placeholder="Por favor escriba su precio"
+      />
+      <input
+        type="text"
+        id="codigoN"
+        placeholder="Por favor escriba su codigo"
+      />
+      <input type="button" id="add" value="Añadir" />
+    </div>
+
+    <br>
+
     <table>
       <thead>
         <tr>
@@ -64,13 +87,11 @@
           <th>Código</th>
         </tr>
       </thead>
-      <tbody id="cuerpoTabla">
-
-      </tbody>
+      <tbody id="cuerpoTabla"></tbody>
     </table>
-    <br>
+    <br />
     <button id="addCk">Añadir</button>
-    <br><br>
+    <br /><br />
     <button id="marcarCk">marcar Checkbox</button>
     <button id="desmarcarCk">Desmarcar ckeckbox</button>
     <button id="borrarFilas">Eliminar filas con checkbox</button>
