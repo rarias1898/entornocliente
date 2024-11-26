@@ -96,6 +96,7 @@
 //   }
 // })
 
+// ? Ejercicio examen
 // ! Ejercicio 17 y 18 y 19
 const objetoTabla = [
   {
