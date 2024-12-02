@@ -12,8 +12,10 @@ window.addEventListener("DOMContentLoaded", () => {
         // console.log(json)
         
         let parrafo = document.getElementById("respuesta")
+        let body = document.getElementsByTagName("body")[0]
         
-        parrafo.innerText = json.answer
+        // parrafo.innerText = json.answer
+        parrafo.innerHTML = `<img src='${json.image}' alt="">`
       }
     })
   })
