@@ -22,6 +22,14 @@ window.addEventListener("DOMContentLoaded", (e) => {
         li.style.fontFamily = "Arial, sans-serif"
         li.style.color = "#333"
 
+        li.addEventListener("mouseenter", (e) => {
+          e.target.style.backgroundColor = "#d1d1d1"
+        })
+        
+        li.addEventListener("mouseout", (e) => {
+          e.target.style.backgroundColor = "#e9e9e9"
+        })
+
         li.innerHTML = `${element.category} - ${element.question}: <b>${element.correct_answer}</b>`
 
         ul.appendChild(li)
