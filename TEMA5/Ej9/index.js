@@ -47,6 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Cargar nuevos posts
   document.getElementById("load-more-btn").addEventListener("click", async () => {
     try {
+      document.getElementById("post-list").innerHTML = ""
       page++
       await fetchApi(page)
     } catch (error) {
