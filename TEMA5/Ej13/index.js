@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const secret = document.createElement("p")
       const edad = document.createElement("p")
       const tituloPoderes = document.createElement("p")
-      const superpoderes = document.createElement("p")
+      const lista = document.createElement("ul")
 
       heroName.innerText = element.name
       secret.innerText = element.secretIdentity
@@ -32,14 +32,16 @@ window.addEventListener("DOMContentLoaded", () => {
       tituloPoderes.innerText = "SuperPoderes"
 
       element.powers.forEach(powers => {
-        superpoderes.innerHTML += powers
+        const li = document.createElement("li")
+        li.innerHTML += powers
+        lista.appendChild(li)
       })
       
       heroDiv.appendChild(heroName)
       heroDiv.appendChild(secret)
       heroDiv.appendChild(edad)
       heroDiv.appendChild(tituloPoderes)
-      heroDiv.appendChild(superpoderes)
+      heroDiv.appendChild(lista)
       section.appendChild(heroDiv)
     });
 
