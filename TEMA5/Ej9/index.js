@@ -1,11 +1,16 @@
 window.addEventListener("DOMContentLoaded", () => {
 
   let page = 1
+  const spinnerContainer = document.getElementById("loading-spinner");
+  const spinner = document.createElement("img")
+  spinner.src = "./images/Spinner.gif"
   
   const fetchApi = async (page) => {
     try {
+      showSpinner(true)
       const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`)
       const data = await response.json()
+      showSpinner(false)
       // console.log(data)
       data.forEach(element => {
         const posts = document.getElementById("post-list")
@@ -24,9 +29,9 @@ window.addEventListener("DOMContentLoaded", () => {
           try {
             const response = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${element.id}`)
             const comments = await response.json()
-
+            divPostDetails.innerHTML = ""
             comments.forEach(comment => {
-              divPostDetails.innerHTML = `${comment.postId} | <b>${comment.email}</b> - ${comment.body}`
+              divPostDetails.innerHTML += `</br>${comment.postId} | <b>${comment.email}</b> - ${comment.body} </br></br>`
               postDetails.appendChild(divPostDetails)
             })
           } catch (error) {
@@ -77,6 +82,16 @@ window.addEventListener("DOMContentLoaded", () => {
       console.log(error)
     }
   })
+
+  const showSpinner = (isLoading) => {
+    
+    if (isLoading) {
+      spinnerContainer.style.display = "block"; // Mostrar el spinner
+      spinnerContainer.appendChild(spinner)
+    } else {
+      spinnerContainer.style.display = "none"; // Ocultar el spinner
+    }
+  }
 
   fetchApi(page)
 })
