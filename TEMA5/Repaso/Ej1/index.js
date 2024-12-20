@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
+
+  const result = document.getElementById("result")
+
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -9,7 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
       comida.forEach((element) => {
 
-        const result = document.getElementById("result")
         const titulo = document.createElement("h2")
         const img = document.createElement("img")
         const ul = document.createElement("ol")
@@ -42,6 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   document.getElementById("btn").addEventListener("click", () => {
+    result.innerHTML = ""
     fetchData();
   })
 
