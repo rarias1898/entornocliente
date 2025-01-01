@@ -9,11 +9,14 @@ window.addEventListener("DOMContentLoaded", () => {
     pokeDiv.innerHTML = ""
     const nombre = document.createElement("h2")
     const img = document.createElement("img")
+    const img2 = document.createElement("img")
     const ul = document.createElement("ul")
 
     nombre.innerText = data.name
-    img.src = data.sprites.other.dream_world.front_default
+    img.src = data.sprites.other.showdown.front_default
     img.style.width = "200px"
+    img2.src = data.sprites.other.showdown.front_shiny
+    img2.style.width = "200px"
 
     data.moves.forEach(each => {
       const li = document.createElement("li")
@@ -23,6 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     pokeDiv.appendChild(nombre)
     pokeDiv.appendChild(img)
+    pokeDiv.appendChild(img2)
     pokeDiv.appendChild(ul)
 
     // console.log(data)
