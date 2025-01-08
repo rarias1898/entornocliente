@@ -27,9 +27,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
         id.innerHTML = `<b>ID: ${element.id}</b>`
         nombre.innerHTML = `<b>Nombre: ${element.name}</b>`
-        estado.innerHTML = `<b>Nombre: ${element.status}</b>`
-        especie.innerHTML = `<b>Nombre: ${element.species}</b>`
-        totalEp.innerHTML = `<b>Nombre: ${element.episode.length}</b>`
+        estado.innerHTML = `<b>Estado: ${element.status}</b>`
+        especie.innerHTML = `<b>Especie: ${element.species}</b>`
+        totalEp.innerHTML = `<b>Episodios: ${element.episode.length}</b>`
 
         perDiv.appendChild(img)
         perDiv.appendChild(info)
