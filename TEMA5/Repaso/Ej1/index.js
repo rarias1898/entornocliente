@@ -29,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
         img.src = element.strMealThumb
         enlace.innerText = element.strMeal
         enlace.href = element.strSource
+        enlace.target = "_blanck"
         
         result.appendChild(titulo)
         result.appendChild(img)
