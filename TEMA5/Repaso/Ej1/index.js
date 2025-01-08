@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const enlace = document.createElement("a")
         
         for (let i = 1; i <= 20; i++) {
-          if (element[`strIngredient${i}`]) {
+          if (element[`strIngredient${i}`] && element[`strIngredient${i}`] !== null) {
             const li = document.createElement("li")
             li.innerText = `${element[`strIngredient${i}`]} - ${element[`strMeasure${i}`]}`
             ul.appendChild(li)
