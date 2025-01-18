@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     if (idPersonaje < 1 || idPersonaje > 10) {
-      alert("Error, El número tiene que estar entra 1 y 10");
+      alert("Error, El número tiene que estar entre 1 y 10");
       info.innerHTML = ""
       infoPeli.innerHTML = ""
       return;
@@ -78,7 +78,8 @@ window.addEventListener("DOMContentLoaded", () => {
               const tituloUlrPersonajes = document.createElement("h4");
               const listaPersonajes = document.createElement("ul");
 
-              const nombreDirector = data.director.slice(6, 19);
+              // const nombreDirector = data.director.slice(6, 19);
+              const nombreDirector = JSON.parse(data.director)[0]
               const cantidadPersonajes = data.characters.length;
 
               tituloPeli.innerText = data.title;
