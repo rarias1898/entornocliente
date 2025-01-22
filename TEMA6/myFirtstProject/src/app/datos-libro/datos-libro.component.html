@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<button (click)="anadirCantidad()">Añadir</button>
+<button (click)="restarCantidad()" [disabled]="libro.cantidad == 0">Restar</button>
+<input type="number" name="cantidad" [(ngModel)]="libro.cantidad">
+
+<ul>
+  <li>Titulo: {{libro.titulo}}</li>
+  <li>Autor: {{libro.autor}}</li>
+  <li [class.aviso]="libro.stock == 0">Stock: {{libro.stock}}</li>
+  <li>Cantidad : {{libro.cantidad}}</li>
+  <!-- <li><img src={{libro.imagen}} alt="" (mouseenter)="imprimirPos()"></li> -->
+</ul>
+
+<button (click)="pasarAlPadre()">Pasar al padre</button>
+
+<p>{{prueba}}</p>

@@ -1,0 +1,43 @@
+<input type="text" name="txt" [value]="name">
+<button (click)="mostrarNombre()">Pulsar</button>
+
+<hr>
+
+<input type="text" name="txt2" (keyup)="pintarLetras($event)">
+<p [innerHTML]="cadena"></p>
+
+<input type="text" [(ngModel)]="nombre">
+<p>El nombre es: {{ nombre }} </p>
+
+<hr>
+<input type="text" name="txt3" [(ngModel)]="contenidoDiv">
+
+<div>
+  {{contenidoDiv}}
+</div>
+
+
+<hr>
+
+<input type="text" name="txt4" [(ngModel)]="upperCase">
+<input type="text" name="txt5" value="{{upperCase.toUpperCase()}}">
+
+<hr>
+
+<table>
+  <tr>
+    <th>Fila 1</th>
+    <th>Fila 2</th>
+    <th>Fila 3</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="ckk" [checked]="checked"></td>
+  </tr>
+  <tr>
+    <div>Hola</div>
+  </tr>
+</table>
+
+<hr>
+
+<app-datos-libro [prueba]="prueba" (enviar)="seleccionarUsername($event)"></app-datos-libro>
