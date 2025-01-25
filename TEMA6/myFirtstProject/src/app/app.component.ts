@@ -33,8 +33,9 @@ export class AppComponent {
   checked: boolean = true
 
   prueba: string = "pruebaaa"
+  delPadre: string = ""
 
   seleccionarUsername(username: string) {
-    console.log(username)
+    this.delPadre = username
   }
 }
