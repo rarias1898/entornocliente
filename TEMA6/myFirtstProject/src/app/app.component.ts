@@ -38,4 +38,12 @@ export class AppComponent {
   seleccionarUsername(username: string) {
     this.delPadre = username
   }
+
+  numLibro: string = ""
+
+  libro: any = ""
+
+  recibirLibro(title: string) {
+  this.libro = title
+  }
 }

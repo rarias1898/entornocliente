@@ -42,4 +42,9 @@
 
 <p>{{delPadre}}</p>
 
-<app-datos-libro [prueba]="prueba" (enviar)="seleccionarUsername($event)"></app-datos-libro>
+<label for="libro">Numero del libro</label>
+<input type="text" name="libro" [(ngModel)]="numLibro">
+
+<p>{{libro}}</p>
+
+<app-datos-libro [prueba]="prueba" [numLibro]="numLibro" (enviar)="seleccionarUsername($event)" (enviarLibro)="recibirLibro($event)"></app-datos-libro>
