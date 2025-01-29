@@ -19,9 +19,9 @@
 </ng-template>
 
 <h1>Todas las personas</h1>
-<div *ngFor="let persona of persona; let i = index">
+<div *ngFor="let persona of personas; let i = index">
   <ul>
-    <li>{{i}}</li>
+    <li>{{ i + 1 }}</li>
     <li>{{persona.nombre}}</li>
     <li>{{persona.apellido}}</li>
     <li>{{persona.edad}}</li>
@@ -29,7 +29,7 @@
 </div>
 
 <h1>Mayores de 30</h1>
-<div *ngFor="let persona of persona; let i = index" >
+<div *ngFor="let persona of personas; let i = index" >
   <ul *ngIf="persona.edad>=30">
     <li>{{i}}</li>
     <li>{{persona.nombre}}</li>
@@ -52,3 +52,9 @@
 <hr>
 
 <app-articulo></app-articulo>
+
+<div *ngFor="let p of personas; let i = index">
+  <app-listado-personas [per]="p" (nombre)="nombreDelHijo($event)"></app-listado-personas>
+</div>
+
+<p>{{nombreDesdeElhijo}}</p>

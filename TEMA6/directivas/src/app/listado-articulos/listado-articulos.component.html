@@ -2,9 +2,13 @@
 
 <div *ngFor="let articulos of articulos; let i = index">
   <ul>
-    <li>{{i}}</li>
+    <li>{{i + 1}}</li>
     <li>{{articulos.nombre}}</li>
     <li>{{articulos.precio}}</li>
     <li>{{articulos.unidades}}</li>
   </ul>
 </div>
+
+<app-caracteristicas-articulo (selected)="SeleccionarPadre($event)"></app-caracteristicas-articulo>
+
+<p>{{carac}}</p>

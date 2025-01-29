@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let pokemon of (pokemonList$ | async)?.results; let i = index">
+    {{ i + 1 }} - {{ pokemon.name }}
+  </li>
+</ul>

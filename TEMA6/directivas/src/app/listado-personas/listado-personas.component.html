@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+<div>
+  <ul>
+    <li>{{per.nombre}}</li>
+    <li>{{per.apellido}}</li>
+    <li>{{per.edad}}</li>
+  </ul>
+  <input type="radio" name="radio" id="radio" (click)="enviarAlPadre()">
+  <span [ngStyle]="{color:'red'}" *ngIf="per.edad < 18; else mayorEdad">Menor de edad</span>
+
+  <ng-template #mayorEdad>
+    <span>Es mayor de edad</span>
+  </ng-template>
+</div>

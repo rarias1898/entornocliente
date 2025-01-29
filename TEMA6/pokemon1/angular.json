@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "directivas": {
+    "pokemon1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/directivas",
+            "outputPath": "dist/pokemon1",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "directivas:build:production"
+              "buildTarget": "pokemon1:build:production"
             },
             "development": {
-              "buildTarget": "directivas:build:development"
+              "buildTarget": "pokemon1:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+
+<form action="#">
+  <label for="caracteristica">Caracteristica</label>
+  <input type="text" name="caracteristica" id="caracteristica" [(ngModel)]="caracteristica">
+  
+  <input type="submit" value="Enviar" (click)="enviarAlPadre()">
+</form>
