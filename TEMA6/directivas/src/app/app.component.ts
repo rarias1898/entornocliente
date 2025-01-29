@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ArticuloComponent } from './articulo/articulo.component';
 
 export interface Persona {
   nombre: string,
@@ -10,11 +11,12 @@ export interface Persona {
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ArticuloComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'Alta de usuarios';
 
   persona: Persona[] = [
@@ -38,5 +40,12 @@ export class AppComponent {
   altaUsuario() {
     this.alta = true
     this.mensaje = `${this.nombre} ${this.apellido}`
+  }
+
+  text: string = ""
+
+  nostrarTexto(e: Event) {
+    const boton = e.target as HTMLButtonElement;
+    this.text = boton.textContent || ""
   }
 }

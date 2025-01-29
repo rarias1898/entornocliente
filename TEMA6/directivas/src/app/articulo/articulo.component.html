@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<form action="#">
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" id="nombre" [(ngModel)]="articuloNuevo.nombre">
+  <br>
+  <label for="precio">Precio</label>
+  <input type="number" name="precio" id="precio" [(ngModel)]="articuloNuevo.precio">
+  <br>
+  <label for="unidades">Unidades</label>
+  <input type="number" name="unidades" id="unidades" [(ngModel)]="articuloNuevo.unidades">
+  <br>
+  <input type="submit" value="Comprar" (click)="enviarDatos()">
+</form>
+
+<app-listado-articulos [articulos]="[articuloNuevo]"></app-listado-articulos>

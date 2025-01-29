@@ -11,13 +11,44 @@
 </form>
 
 <div>
-  <p class="morado" *ngIf="alta">{{mensaje}}</p>
+  <p class="morado" *ngIf="alta; else otraRama">{{mensaje}}</p>
 </div>
 
-<div *ngFor="let persona of persona">
+<ng-template #otraRama>
+  <p>Ninguna alta</p>
+</ng-template>
+
+<h1>Todas las personas</h1>
+<div *ngFor="let persona of persona; let i = index">
   <ul>
+    <li>{{i}}</li>
     <li>{{persona.nombre}}</li>
     <li>{{persona.apellido}}</li>
     <li>{{persona.edad}}</li>
   </ul>
 </div>
+
+<h1>Mayores de 30</h1>
+<div *ngFor="let persona of persona; let i = index" >
+  <ul *ngIf="persona.edad>=30">
+    <li>{{i}}</li>
+    <li>{{persona.nombre}}</li>
+    <li>{{persona.apellido}}</li>
+    <li>{{persona.edad}}</li>
+  </ul>
+</div>
+
+<button (click)="nostrarTexto($event)">A</button>
+<button (click)="nostrarTexto($event)">B</button>
+<button (click)="nostrarTexto($event)">C</button>
+
+<div [ngSwitch]="text">
+  <p *ngSwitchCase="'A'">Pulsado el botón A</p>
+  <p *ngSwitchCase="'B'">Ha pulsado el botón B</p>
+  <p *ngSwitchCase="'C'">Ha pulsado el botón C</p>
+  <p *ngSwitchDefault>No ha seleccionado ningún botón</p>
+</div>
+
+<hr>
+
+<app-articulo></app-articulo>
