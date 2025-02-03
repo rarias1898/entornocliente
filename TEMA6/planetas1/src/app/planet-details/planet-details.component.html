@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+
+<div>
+  <p>Nombre: {{(planeta$ | async)?.name}}</p>
+  <p>Periodo de rotación: {{(planeta$ | async)?.rotation_period}}</p>
+  <p>Periodo Orbital: {{(planeta$ | async)?.orbital_period}}</p>
+  <p>Diametro: {{(planeta$ | async)?.diameter}}</p>
+  <p>Gravedad: {{(planeta$ | async)?.gravity}}</p>
+  <p>Terreno: {{(planeta$ | async)?.terrain}}</p>
+  <p>Agua en superficie: {{(planeta$ | async)?.surface_water}}</p>
+  <p>Población: {{(planeta$ | async)?.population}}</p>
+</div>

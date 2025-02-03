@@ -1,10 +1,17 @@
+export interface HelperPlanet {
+  count: number,
+  next: string,
+  previous: null
+  results: Planet[]
+}
+
 export interface Planet {
   name: string,
-  rotation_period: number,
-  orbital_period: number,
-  diameter: number,
+  rotation_period: string,
+  orbital_period: string,
+  diameter: string,
   gravity: string,
   terrain: string,
-  surface_water: number,
-  population: number
+  surface_water: string,
+  population: string
 }

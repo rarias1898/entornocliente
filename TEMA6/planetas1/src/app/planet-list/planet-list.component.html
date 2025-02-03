@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+
+<div>
+  <ul>
+    <li  *ngFor="let planetas of (planetList$ | async)?.results">
+      {{planetas.name}} - {{planetas.population}}
+    </li>
+  </ul>
+</div>
