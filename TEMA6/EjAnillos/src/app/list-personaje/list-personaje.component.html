@@ -1,0 +1,9 @@
+<h3>List-personaje component</h3>
+<div *ngIf="personajes.length > 0">
+  <ul>
+    <li *ngFor="let personaje of personajes">
+      {{personaje.id}} - {{personaje.name}} - {{personaje.raza}}
+      <button (click)="delPersonaje(personaje.id)">Eliminar</button>
+    </li>
+  </ul>
+</div>

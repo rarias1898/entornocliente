@@ -1,0 +1,10 @@
+<h3>Add-personaje component</h3>
+<div class="formulario">
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" [(ngModel)]="personaje.name" />
+
+  <label for="raza">Raza</label>
+  <input type="text" name="raza" [(ngModel)]="personaje.raza" />
+
+  <button (click)="agregarPersonaje()">Agregar</button>
+</div>

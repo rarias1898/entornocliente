@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Personajes } from '../models/personajes';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,15 @@ export class AnillosService {
 
   constructor(private http: HttpClient) { }
 
-  // getPersonajes(): Observable<Personajes> {
-  //   return this.personajes<Personajes> 
-  // }
+  getPersonajes() {
+    return this.personajes;
+  }
+
+  deletePersonaje(id: number) {
+    return this.personajes = this.personajes.filter(x => x.id !== id);
+  }
+
+  addPersonaje(personaje: Personajes) {
+    return this.personajes.push(personaje);
+  }
 }
