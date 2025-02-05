@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let usuario of listaUsuarios$ | async">
+    {{usuario.name}} - {{usuario.username}} - {{usuario.email}} - {{usuario.phone}} - {{usuario.address.street}}
+  </li>
+</ul>
