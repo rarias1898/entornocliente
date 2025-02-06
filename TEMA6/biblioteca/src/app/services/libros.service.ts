@@ -18,4 +18,8 @@ export class LibrosService {
   getLibros(): Libro[] {
     return this.libros;
   }
+
+  getLibroById(id: number) {
+    return this.libros.find(libro => libro.id === id);
+  }
 }

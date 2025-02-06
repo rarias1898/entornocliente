@@ -2,6 +2,6 @@
 
 <ul class="text-center mt-5">
   <li *ngFor="let libro of listaLibros">
-    {{libro.id}} - {{libro.titulo}}
+    <a [routerLink]="['/detalles', libro.id ]" class="hover:underline">{{libro.id}} - {{libro.titulo}}</a>
   </li>
 </ul>
