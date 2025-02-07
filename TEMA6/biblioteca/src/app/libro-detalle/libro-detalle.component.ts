@@ -9,21 +9,18 @@ import { Libro } from '../models/libro';
   templateUrl: './libro-detalle.component.html',
   styleUrl: './libro-detalle.component.css'
 })
-export class LibroDetalleComponent {
+export class LibroDetalleComponent implements OnInit {
 
-  id: number = 0;
+  libro?: Libro;
 
-  constructor(private act: ActivatedRoute, private libroService: LibrosService) { 
-    this.id = this.act.snapshot.params['id'];
-    console.log(this.id)
-    
+  constructor(private act: ActivatedRoute, private libroService: LibrosService) { }
+
+
+  ngOnInit(): void {
+    let id = Number(this.act.snapshot.params['id']);
+    this.libro = this.libroService.getLibroById(id);
   }
-
-  libro: Libro[] = [];
   
-  // getLibroById(id: number) {
-  //   this.libro = this.libroService.getLibroById(id);
-  // }
   
   title: string = 'Detalle del libro'
 }
