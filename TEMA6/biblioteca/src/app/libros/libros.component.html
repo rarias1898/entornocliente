@@ -2,6 +2,11 @@
 
 <ul class="text-center mt-5">
   <li *ngFor="let libro of listaLibros">
-    <a [routerLink]="['/detalles', libro.id ]" class="hover:underline">{{libro.id}} - {{libro.titulo}}</a>
+    <a [routerLink]="['/detalles', libro.id ]" class="hover:underline">{{libro.id}} - {{libro.titulo}}</a> -
+    <a [routerLink]="['/update', libro.id]" class="underline hover:text-slate-400">Mod</a>
   </li>
 </ul>
+
+<div class="text-center mt-15">
+  <button (click)="altaLibros()">Nuevo Libro</button>
+</div>

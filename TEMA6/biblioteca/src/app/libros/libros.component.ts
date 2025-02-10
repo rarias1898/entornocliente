@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../services/libros.service';
 import { Libro } from '../models/libro';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-libros',
@@ -12,12 +12,16 @@ import { RouterLink } from '@angular/router';
 })
 export class LibrosComponent implements OnInit {
 
-  constructor(private libroService: LibrosService) { }
+  constructor(private libroService: LibrosService, private router: Router) { }
 
   listaLibros: Libro[] = []
 
   ngOnInit(): void {
     this.listaLibros = this.libroService.getLibros();
+  }
+
+  altaLibros() {
+    this.router.navigate(['/addlibro'])
   }
 
   title: string = 'Libros de la biblioteca'

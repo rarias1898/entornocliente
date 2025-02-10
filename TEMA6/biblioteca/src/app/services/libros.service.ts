@@ -22,4 +22,10 @@ export class LibrosService {
   getLibroById(id: number) {
     return this.libros.find(libro => libro.id === id);
   }
+
+  addLibro(libro: Libro) {
+    libro.id = this.libros.length + 1
+
+    this.libros.push(libro);
+  }
 }
