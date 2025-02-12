@@ -1,0 +1,19 @@
+<h1 class="text-center text-3xl">{{ title }}</h1>
+
+<form action="#" class="flex justify-center mt-5">
+  <label for="id" class="mr-2">ID usuario</label>
+  <input type="number" name="id" [(ngModel)]="id" class="border-1 pl-2" />
+  <button (click)="enviarId()">Enviar</button>
+</form>
+
+<div *ngIf="usuario$ | async as usuario" class="text-center mt-10">
+  <p>Nombre: {{usuario.name}}</p>
+  <p>Username: {{usuario.username}}</p>
+  <p>Email: {{usuario.email}}</p>
+  <p>Dirección:</p>
+  <ul>
+    <li>{{usuario.address.street}}</li>
+    <li>{{usuario.address.suite}}</li>
+    <li>{{usuario.address.zipcode}}, {{usuario.address.city}}</li>
+  </ul>
+</div>

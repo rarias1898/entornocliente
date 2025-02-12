@@ -1,0 +1,24 @@
+<h1 class="text-center text-3xl">{{title}}</h1>
+
+<button (click)="cargarPosts()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">Cargar posts</button>
+
+<div *ngIf="listaPosts$" class="text-center w-400 flex justify-center m-10">
+  <table class="table-fixed border">
+    <thead class="border">
+      <tr class="border">
+        <th class="border">User id</th>
+        <th class="border">Post id</th>
+        <th class="border">Title</th>
+        <th class="border">Body</th>
+      </tr>
+    </thead>
+    <tbody class="border">
+      <tr *ngFor="let post of listaPosts$ | async" class="border">
+        <td class="border">{{post.userId}}</td>
+        <td class="border">{{post.id}}</td>
+        <td class="border">{{post.title}}</td>
+        <td class="border">{{post.body}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
