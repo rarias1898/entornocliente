@@ -1,0 +1,19 @@
+<h1 class="text-center text-3xl">Detalles del usuario</h1>
+
+<div class="mt-10 flex justify-evenly">
+  <div>
+    <h1 class="text-2xl">Detalles de {{ (usuario$ | async)?.name }}</h1>
+    <p>Email: {{ (usuario$ | async)?.email }}</p>
+    <p>Username: {{ (usuario$ | async)?.username }}</p>
+    <p>Direccion: {{ (usuario$ | async)?.address?.street }} - {{ (usuario$ | async)?.address?.suite }}, {{ (usuario$ | async)?.address?.city }}</p>
+  </div>
+
+  <button (click)="volver()" class="text-center hover:underline">Atrás</button>
+  
+  <div>
+    <h1 class="text-2xl">Empresa</h1>
+    <p>Nombre: {{ (usuario$ | async)?.company?.name }}</p>
+    <p>Frase: {{ (usuario$ | async)?.company?.catchPhrase }}</p>
+    <p>Bs: {{ (usuario$ | async)?.company?.bs }}</p>
+  </div>
+</div>

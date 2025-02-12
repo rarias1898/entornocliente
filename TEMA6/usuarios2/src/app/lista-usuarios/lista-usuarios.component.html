@@ -1,0 +1,5 @@
+<h1 class="text-center text-3xl mb-5 underline">Lista de usuarios</h1>
+
+<ul class="text-center" *ngFor="let usuario of listaUsuarios$ | async">
+  <a [routerLink]="['/detalles', usuario.id]" class="hover:underline"><li>{{usuario.id}}. {{usuario.name}} | {{usuario.username}}</li></a>
+</ul>
