@@ -1,0 +1,29 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "El Padrino",
+      "actores": ["Marlon Brando", "Al Pacino", "James Caan"]
+    },
+    {
+      "id": 2,
+      "titulo": "El Padrino II",
+      "actores": ["Al Pacino", "Robert Duvall", "Diane Keaton"]
+    },
+    {
+      "id": 3,
+      "titulo": "El Padrino III",
+      "actores": ["Al Pacino", "Diane Keaton", "Talia Shire"]
+    },
+    {
+      "id": 4,
+      "titulo": "Scarface",
+      "actores": ["Al Pacino", "Michelle Pfeiffer", "Steven Bauer"]
+    },
+    {
+      "id": 5,
+      "titulo": "Heat",
+      "actores": ["Al Pacino", "Robert De Niro", "Val Kilmer"]
+    }
+  ]
+}
