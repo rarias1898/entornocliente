@@ -20,12 +20,19 @@ export class LibrosService {
   }
 
   getLibroById(id: number) {
-    return this.libros.find(libro => libro.id === id);
+    return this.libros.find(libro => Number(libro.id) === id);
   }
 
   addLibro(libro: Libro) {
     libro.id = this.libros.length + 1
 
     this.libros.push(libro);
+  }
+
+  modificarLibro(libro: Libro) {
+    const index = this.libros.findIndex(l => l.id === libro.id);
+    if (index !== -1) {
+      this.libros[index] = { ...libro };
+    }
   }
 }
