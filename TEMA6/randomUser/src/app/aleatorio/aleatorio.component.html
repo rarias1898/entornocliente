@@ -1,1 +1,8 @@
-<p>aleatorio works!</p>
+<div *ngIf="(randomUser$ | async) as user" class="flex justify-center">
+  <ul *ngFor="let user of user.results">
+    <li>{{user.name.title}}. {{user.name.first}} {{user.name.last}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.location.city}}</li>
+    <img [src]="user.picture.medium" alt="">
+  </ul>
+</div>

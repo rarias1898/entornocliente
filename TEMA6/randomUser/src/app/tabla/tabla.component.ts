@@ -5,18 +5,20 @@ import { Response } from '../models/aleatorio';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-aleatorio',
+  selector: 'app-tabla',
   imports: [CommonModule],
-  templateUrl: './aleatorio.component.html',
-  styleUrl: './aleatorio.component.css'
+  templateUrl: './tabla.component.html',
+  styleUrl: './tabla.component.css'
 })
-export class AleatorioComponent implements OnInit {
+export class TablaComponent implements OnInit{
 
-  randomUser$ = new Observable<Response>
+  listaUsers$ = new Observable<Response>
 
   constructor(private aleatorioService: AleatorioService) { }
 
   ngOnInit(): void {
-    this.randomUser$ = this.aleatorioService.getRandomUser()
+    this.listaUsers$ = this.aleatorioService.getTenUsers()
   }
+
+
 }

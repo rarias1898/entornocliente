@@ -1,4 +1,4 @@
-export interface Result {
+export interface Response {
   results: User[]
 }
 
@@ -10,9 +10,13 @@ export interface User {
   },
   email: String,
   location: {
-    city: String
+    city: String,
+    street: {
+      name: String,
+      number: Number
+    }
   },
   picture: {
     medium: String
-  }
+  },
 }
