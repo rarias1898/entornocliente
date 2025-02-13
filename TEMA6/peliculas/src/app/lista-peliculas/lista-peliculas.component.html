@@ -10,7 +10,7 @@
     <tbody>
       <tr *ngFor="let peli of (listaPelis$ | async)">
         <td class="border">{{peli.id}}</td>
-        <td class="border"><a [routerLink]="['/peliculas', peli.id]" class="hover:bg-slate-500">{{peli.titulo}}</a></td>
+        <td class="border"><button (click)="motrarActores(peli.id)" class="hover:bg-slate-500 cursor-pointer">{{peli.titulo}}</button></td>
         <td class="border"><button class="cursor-pointer hover:bg-slate-500">Modificar</button></td>
       </tr>
     </tbody>

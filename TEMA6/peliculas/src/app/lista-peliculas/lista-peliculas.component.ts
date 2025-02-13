@@ -21,4 +21,8 @@ export class ListaPeliculasComponent implements OnInit {
     this.listaPelis$ = this.peliculaService.getPeliculas()
   }
 
+  motrarActores(id: Number) {
+    
+  }
+
 }
