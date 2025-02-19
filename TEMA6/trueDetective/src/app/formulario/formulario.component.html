@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<form action="#">
+  <label for="serie">Serie</label>
+  <input type="text" name="serie" [(ngModel)]="datosFormulario.serie">
+
+  <label for="correo">Correo</label>
+  <input type="text" name="correo" [(ngModel)]="datosFormulario.correo">
+
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" [(ngModel)]="datosFormulario.nombre">
+
+  <button (click)="enviarAlHijo()">Enviar</button>
+</form>
+
+<div *ngIf="errorMsg">
+  <h1 [ngClass]="'red'">Por favor, introduce el correo.</h1>
+</div>
+
+<div *ngIf="valoracion">
+  <h1 [ngClass]="'green'">Valoración: Gracias {{datosParaHijo.nombre}} por su valoración: {{valoracion}}</h1>
+</div>
+
+<div *ngIf="datosParaHijo !== null">
+  <app-resumen [data]="datosParaHijo" (selected)="recibirValoracion($event)"></app-resumen>
+</div>

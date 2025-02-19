@@ -1,0 +1,16 @@
+<div class="serie" *ngIf="serie$ | async as serie">
+  <img [src]="serie.image.original" alt="Hola">
+
+  <div class="text-part">
+    <h1>{{serie.name}}</h1>
+    <p><b>Idioma: </b>{{serie.language}}</p>
+    <p><b>Géneros:</b></p>
+    <ul>
+      <li *ngFor="let genero of serie.genres">
+        {{genero}}
+      </li>
+    </ul>
+
+    <p [innerHTML]="serie.summary"></p>
+  </div>
+</div>

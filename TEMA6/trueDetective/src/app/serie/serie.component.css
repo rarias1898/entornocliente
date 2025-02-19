@@ -1,0 +1,9 @@
+.serie {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.serie img {
+  width: auto;
+  height: 800px;
+}

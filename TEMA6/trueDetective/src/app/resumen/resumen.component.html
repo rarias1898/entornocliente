@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<p><b>Nombre: </b>{{data.nombre}}</p>
+<p><b>Correo: </b>{{data.correo}}</p>
+<p><b>Serie sugerida: </b>{{data.serie}}</p>
+<label for="valoracion">Valoración</label>
+<input type="text" name="valoracion" [(ngModel)]="valoracion">
+<button (click)="enviarValoracion()">Enviar Valoración</button>
